@@ -7,7 +7,7 @@ contract TimeLockedDepositBox is BaseDepositBox
 {
     uint256 private unlockTime;
 
-    constructor(uint256 lockDuration) 
+    constructor(uint256 lockDuration) BaseDepositBox()//显式调用
     {
         unlockTime = block.timestamp + lockDuration;
     }
